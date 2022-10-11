@@ -26,6 +26,19 @@ class Category {
   );
 }
 
+class PostData {
+  final int id;
+  final String caption;
+  final String title;
+  final String likes;
+  final String time;
+  final bool isBookmarked;
+  final String imageFileName;
+
+  PostData(this.id, this.caption, this.title, this.likes, this.time,
+      this.isBookmarked, this.imageFileName);
+}
+
 class AppData {
   static List<Story> get stories {
     return [
@@ -39,7 +52,18 @@ class AppData {
 
   static List<Category> get categories {
     return [
-     Category(1001, 'Technology', '2.png'),
+      Category(1001, 'Technology', '4.png'),
+      Category(1002, 'Adventure', '2.png'),
+      Category(1003, 'Technology', '3.png'),
+      Category(1004, 'Adventure', '4.png'),
+      Category(1005, 'Technolo', '3.png'),
+    ];
+  }
+
+  static List<PostData> get posts {
+    return [
+      PostData(1001, 'BIG DATA', 'Why Big Data Needs Thick Data?','2.1k', '2:00', true, '1.png'),
+      PostData(1002, 'UX DESIGN', 'Step design sprint for UX beginner','2.1k', '2:00', false, '5.png'),
     ];
   }
 }
