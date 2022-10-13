@@ -39,6 +39,13 @@ class PostData {
       this.isBookmarked, this.imageFileName);
 }
 
+class OnBoardingItem {
+  final String title;
+  final String description;
+
+  OnBoardingItem(this.title, this.description);
+}
+
 class AppData {
   static List<Story> get stories {
     return [
@@ -62,8 +69,37 @@ class AppData {
 
   static List<PostData> get posts {
     return [
-      PostData(1001, 'BIG DATA', 'Why Big Data Needs Thick Data?','2.1k', '2:00', true, '1.png'),
-      PostData(1002, 'UX DESIGN', 'Step design sprint for UX beginner','2.1k', '2:00', false, '5.png'),
+      PostData(
+        1001,
+        'BIG DATA',
+        'Why Big Data Needs Thick Data?',
+        '2.1k',
+        '2:00',
+        true,
+        '1.png',
+      ),
+      PostData(
+        1002,
+        'UX DESIGN',
+        'Step design sprint for UX beginner',
+        '2.1k',
+        '2:00',
+        false,
+        '5.png',
+      ),
     ];
+  }
+
+  static List<OnBoardingItem> get onBoardingItems {
+    List<OnBoardingItem> items = [];
+    for (var i = 0; i < 4; i++) {
+      items.add(
+        OnBoardingItem(
+          'Read the article you want instantly',
+          'You can read thousands of articles on Blog Club, save them in the application and share them with your loved ones.',
+        ),
+      );
+    }
+    return items;
   }
 }
