@@ -1,3 +1,4 @@
+import 'package:blog_club/article.dart';
 import 'package:blog_club/bottom_navigation.dart';
 import 'package:blog_club/carousel/carousel_slider.dart';
 import 'package:blog_club/data.dart';
@@ -34,10 +35,20 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Blog Club',
       theme: ThemeData(
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.white,
+          foregroundColor: primaryTextColor,
+          // elevation: 0,
+          titleSpacing: 32,
+        ),
+        snackBarTheme: const SnackBarThemeData(backgroundColor: primaryColor),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
             textStyle: MaterialStateProperty.all(
-              const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
+              const TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
         ),
@@ -47,7 +58,7 @@ class MyApp extends StatelessWidget {
           onSurface: primaryTextColor,
           onBackground: primaryTextColor,
           background: Color(0xffFBFCFF),
-          surface:Colors.white
+          surface: Colors.white,
         ),
         textTheme: const TextTheme(
           subtitle1: TextStyle(
@@ -85,7 +96,7 @@ class MyApp extends StatelessWidget {
       //   ],
       // ),
 
-      home: const SplashScreen(),
+      home: const ArticleScreen(),
     );
   }
 }
