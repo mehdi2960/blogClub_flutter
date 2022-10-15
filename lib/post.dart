@@ -35,8 +35,7 @@ class PostList extends StatelessWidget {
           ),
         ),
         ListView.builder(
-          physics:
-              const ClampingScrollPhysics(), //Baraye Scroll Kardan 2Ta Mohtava
+          physics:const ClampingScrollPhysics(), //Baraye Scroll Kardan 2Ta Mohtava
           itemCount: posts.length,
           // padding: const EdgeInsets.only(bottom: 40),
           itemExtent: 141,
@@ -45,14 +44,15 @@ class PostList extends StatelessWidget {
             final post = posts[index];
             return Container(
               margin: const EdgeInsets.fromLTRB(32, 0, 32, 0),
+              
               // height: 149,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(32),
-                boxShadow: const [
+                boxShadow:  [
                   BoxShadow(
                     blurRadius: 20,
-                    color: Color(0x1a5282FF),
+                    color: const Color(0xff5282FF).withOpacity(0.1),
                   ),
                 ],
               ),
@@ -71,9 +71,10 @@ class PostList extends StatelessWidget {
                           Text(
                             post.caption,
                             style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.w700,
-                                color: Color(0xff376AED)),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w700,
+                              color: Color(0xff376AED),
+                            ),
                           ),
                           const SizedBox(
                             height: 8,
@@ -152,4 +153,3 @@ class PostList extends StatelessWidget {
     );
   }
 }
-

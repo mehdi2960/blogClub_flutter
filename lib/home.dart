@@ -45,19 +45,15 @@ class HomeScreen extends StatelessWidget {
                   style: themeData.textTheme.headline4,
                 ),
               ),
-
               //Story
-              _Story(stories: stories),
-     
+              _Story(stories: stories), 
               const SizedBox(
                 height: 16,
               ),
-
               // Slider
               const SliderList(),
               // Post
               const PostList(),
-         
               const SizedBox(
                 height: 32,
               ),
