@@ -116,7 +116,7 @@ class _OnBoardingState extends State<OnBoarding> {
                             if (page == items.length - 1) {
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(
-                                  builder: (context) => const AuthScreen(),
+                                  builder: (context) => const HomeScreen(),
                                 ),
                               );
                             } else {

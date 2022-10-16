@@ -199,7 +199,7 @@ class _Login extends StatelessWidget {
             const SizedBox(
               width: 8,
             ),
-            Image.asset('assets/img/icons/Vector.png'),
+            Image.asset('assets/img/icons/Facebook.png'),
             const SizedBox(
               width: 8,
             ),
@@ -293,7 +293,7 @@ class _SignUp extends StatelessWidget {
             const SizedBox(
               width: 8,
             ),
-            Image.asset('assets/img/icons/Vector.png'),
+            Image.asset('assets/img/icons/Facebook.png'),
             const SizedBox(
               width: 8,
             ),

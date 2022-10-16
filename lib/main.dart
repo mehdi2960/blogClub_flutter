@@ -85,19 +85,19 @@ class MyApp extends StatelessWidget {
         ),
       ),
 
-      // home: Stack(
-      //   children: const [
-      //     Positioned.fill(child: HomeScreen()),
-      //     Positioned(
-      //       right: 0,
-      //       left: 0,
-      //       bottom: 0,
-      //       child: BottomNavigation(),
-      //     ),
-      //   ],
-      // ),
+      home: Stack(
+        children: const [
+          Positioned.fill(child: HomeScreen()),
+          Positioned(
+            right: 0,
+            left: 0,
+            bottom: 0,
+            child: BottomNavigation(),
+          ),
+        ],
+      ),
 
-      home: const ProfileScreen(),
+      // home: const SplashScreen(),
     );
   }
 }
